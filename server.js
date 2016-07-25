@@ -8,9 +8,15 @@ var ig = require('instagram-node').instagram();
 app.use(express.static(__dirname + '/public'));
 app.set('view engine', 'ejs');
 
+ig.use({
+	access_token: process.env.TOKEN
+});
+
 // Routes
 app.get('/', function(req, res) {
-	res.render('pages/index');
+	ig.user_self_media_recent(function(err, medias, pagination, remaining, limit) {
+		res.render('pages/index', {elements: medias});
+	});
 });
 
 // Starting Server

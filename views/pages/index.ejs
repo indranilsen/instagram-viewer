@@ -11,7 +11,28 @@
 	</header>
 
 	<main>
-		instagram photos will go here
+		<div class="row">
+			<% elements.forEach(function(elem) { %>
+			<div class="instagram-pic col-sm-3">
+				<a href="<%= elem.link %>" target="_blank">
+					<img src="<%= elem.images.standard_resolution.url %>" class="img-rounded"/>
+				</a>
+
+				<div class="instagram-bar">
+					<div class="likes">
+						<span class="glyphicon glyphicon-heart"></span>
+						<%= elem.likes.count %>
+					</div>
+
+					<div class="comments">
+						<span class="glyphicon glyphicon-comment"></span>
+						<%= elem.comments.count %>
+					</div>
+				</div>
+
+			</div>
+			<% }); %>
+		</div>
 	</main>
 
 	<footer>
