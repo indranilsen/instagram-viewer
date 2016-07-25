@@ -1,8 +1,8 @@
 // Packages
 var express = require('express');
 var app = express();
+var dotenv = require('dotenv').config({silent: true});
 var ig = require('instagram-node').instagram();
-
 
 // Setup
 app.use(express.static(__dirname + '/public'));
