@@ -32,6 +32,33 @@ body {
 	float:right; 
 }
 
+.user-info {
+	background-color: #125688;
+	border-radius: 5px;
+	padding: 2em;
+}
+
+.counts {
+	float: right;
+	padding-top: 0.5em;
+}
+
+.counts li {
+	padding-right: 1em;
+}
+
+.counts a {
+	cursor: default;
+}
+
+.user-info > * {
+	color: white;
+}
+
+.bio {
+	padding-top: 0.4em;
+}
+
 footer { 
 	padding:50px;
 }

@@ -15,7 +15,32 @@ ig.use({
 // Routes
 app.get('/', function(req, res) {
 	ig.user_self_media_recent(function(err, medias, pagination, remaining, limit) {
-		res.render('pages/index', {elements: medias, name: medias[0].user.full_name});
+		ig.user(medias[0].user.id, function(error, userInfo, rem, lim) {
+			res.render('pages/index', {
+				elements: medias, 
+				name: userInfo.full_name,
+				username: userInfo.username,
+				bio: userInfo.bio,
+				website: userInfo.website,
+				pic: userInfo.profile_picture,
+				posts: userInfo.counts.media,
+				followers: userInfo.counts.followed_by,
+				following: userInfo.counts.follows,
+				id: userInfo.id
+			}); 
+		});
+		// res.render('pages/index', {
+		// 	elements: medias, 
+		// 	name: userInfo.full_name,
+		// 	username: userInfo.username,
+		// 	bio: userInfo.bio,
+		// 	website: userInfo.website,
+		// 	pic: userInfo.profile_picture,
+		// 	posts: userInfo.counts.media,
+		// 	followers: userInfo.counts.followed_by,
+		// 	following: userInfo.counts.follows,
+		// 	id: userInfo.id;
+		// });
 	});
 });
 

@@ -1,0 +1,28 @@
+<div class="media user-info">
+  <a class="media-left" href="#">
+    <img class="media-object" src="<%= pic %>" alt="Generic placeholder image">
+  </a>
+  <div class="media-body">
+  	
+  	<h4 class="media-heading"><%= name %> | <%= username %></h4>
+
+  	<% if(bio) {%>
+  	<p class="bio"><%= bio %></p>
+  	<% } else {%>
+  	<p class="bio invisible">Invisible text</p>
+  	<% } %>
+
+  	<% if(website) {%>
+  	<p class="website"><%= website %></p>
+  	<% } else {%>
+  	<p class="website invisible">Invisible text</p>
+  	<% } %>
+
+    <ul class="nav nav-pills counts" role="tablist">
+	  <li role="presentation" class="active"><a>Posts <span class="badge"><%= posts %></span></a></li>
+	  <li role="presentation" class="active"><a>Followers <span class="badge"><%= followers %></span></a></li>
+	  <li role="presentation" class="active"><a>Following <span class="badge"><%= following %></span></a></li>
+	</ul>
+
+  </div>
+</div>
