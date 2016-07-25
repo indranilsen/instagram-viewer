@@ -1,0 +1,11 @@
+{
+  "name": "ig-show",
+  "version": "1.0.0",
+  "description": "A node app that uses the Instagram API to display the user's photos.",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Indranil Sen",
+  "license": "MIT"
+}
