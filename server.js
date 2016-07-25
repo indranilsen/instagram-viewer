@@ -29,18 +29,6 @@ app.get('/', function(req, res) {
 				id: userInfo.id
 			}); 
 		});
-		// res.render('pages/index', {
-		// 	elements: medias, 
-		// 	name: userInfo.full_name,
-		// 	username: userInfo.username,
-		// 	bio: userInfo.bio,
-		// 	website: userInfo.website,
-		// 	pic: userInfo.profile_picture,
-		// 	posts: userInfo.counts.media,
-		// 	followers: userInfo.counts.followed_by,
-		// 	following: userInfo.counts.follows,
-		// 	id: userInfo.id;
-		// });
 	});
 });
 

@@ -55,6 +55,10 @@ body {
 	color: white;
 }
 
+.user-info img {
+	border-radius: 5px;
+}
+
 .bio {
 	padding-top: 0.4em;
 }
