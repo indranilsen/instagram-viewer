@@ -15,10 +15,10 @@ ig.use({
 // Routes
 app.get('/', function(req, res) {
 	ig.user_self_media_recent(function(err, medias, pagination, remaining, limit) {
-		res.render('pages/index', {elements: medias});
+		res.render('pages/index', {elements: medias, name: medias[0].user.full_name});
 	});
 });
 
 // Starting Server
 app.listen(5000);
-console.log('App started!');
+console.log('App started! ... Listening on port 5000');
